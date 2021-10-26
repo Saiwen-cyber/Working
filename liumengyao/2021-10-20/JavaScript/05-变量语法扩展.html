@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1.更新变量，以最后一次为准
+        var name = 'Arkin';
+        console.log(name);
+        name = 'MAX';
+        console.log(name);
+
+        // 2.可以同时声明多个变量
+        var myName = 'ARKIN',
+            age = 21,
+            email = 'ARKIN@163.com',
+            salary = 20000;
+        
+        // 3.声明变量的特殊情况
+            // 3.1 只声明不赋值
+            var birthday;
+            console.log(birthday);  // undefined
+            // 3.2 不声明不赋值  报错
+            console.log(tel);     // 报错
+            // 3.3 不声明直接赋值    （会作为全局变量，不建议使用）
+            dream = "月薪两万";
+            console.log(dream);
+
+            // 尽量不使用 name 为变量名 
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
