@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input表单元素</title>
+</head>
+<body>
+    <form action="xxx.php" method="get">
+        <!-- text:文本框,用户可以在里面输入任何文字 -->
+        <!-- maxlength="" 规定最大可输入的字符数 一般较少使用 -->
+        用户名: <input type="text" name="username" value="请输入用户名" maxlength="6">          
+        <br>
+        <!-- passwd:密码框,用户看不见输入的密码 -->
+        密&nbsp;&nbsp;&nbsp;码: <input type="password" name="pwd">        
+        <br>
+
+        <!-- name是表单元素的名字,性别单选按钮必须有同一个name值,才可以实现多选一 -->
+        <!-- 单选按钮和复选框可以设置checked按钮,界面打开是默认选择这个按钮 -->
+        <!-- radio:单选按钮,可以实现多选一 -->
+        性&nbsp;&nbsp;&nbsp;别: 男 <input type="radio" name="sex" value="男"> 
+              女 <input type="radio" name="sex" value="女" checked="checked">        
+        <br>
+
+        <!-- checkbox:复选框,可以实现多选 -->
+        爱&nbsp;&nbsp;&nbsp;好: 吃饭<input type="checkbox" name="hobby" value="吃饭"> 
+              睡觉<input type="checkbox" name="hobby" value="睡觉"> 
+              打豆豆<input type="checkbox" name="hobby" value="打豆豆" checked="checked">        
+        <br>
+
+        <!-- name 和 value 是每个表单元素都有的属性值,主要给后台人员使用  --> 
+        <br>
+
+        <!-- 点了提交按钮,可以把表单域form里面的表单元素 里面的值 提交给后台服务器 -->
+        <input type="submit" value="免费注册">
+        <!-- 重置按钮可以还原表单元素初始的默认状态 -->
+        <input type="reset" value="重新填写">
+        <br>
+
+        <!-- 普通按钮button 结合js使用 -->
+        <input type="button" value="获取短信验证码">   
+        <!-- 上传头像 -->
+        <!-- 文件域 使用场景:上传文件使用的 -->
+        <input type="file" value="上传文件">
+        <br>
+
+        <label for="text">用户名:</label><input type="text" id="text"><br>
+        <input type="radio" id="nan" name="sex"> <label for="nan">男</label>
+        <input type="radio" id="nv" name="sex"> <label for="nv">女</label><br>
+
+    </form>
+</body>
+</html>

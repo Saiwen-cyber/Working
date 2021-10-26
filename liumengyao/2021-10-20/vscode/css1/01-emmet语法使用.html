@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one {
+            /* tac+tab  */
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- 生成标签 直接输入标签名按tab键 就可以 -->
+    <div></div>
+    <table></table>
+
+    <!-- 生成多个相同的标签 标签名*n 即可 -->
+    <div></div>
+    <div></div>
+    <div></div>
+
+    <!-- 父子关系的 用>  例如 ul>li -->
+    <ul>
+        <li></li>
+    </ul>
+
+    <!-- 兄弟关系 用+ 例如 div+p-->
+    <div></div>
+    <p></p>
+
+    <!-- 生成带有类名或者id名字的 直接写.demo 或者#two  tab键即可 -->
+    <!-- 例如 .nav -->
+    <div class="nav"></div>
+    <!-- 例如 #banner -->
+    <div id="banner"></div>
+    <!-- p.one   -->
+    <p class="one"></p>
+    <!-- span.one  -->
+    <span class="gray"></span>
+    <!-- ul>li#two  -->
+    <ul>
+        <li id="two"></li>
+    </ul>
+
+    <!-- 如果想生成的类名有顺序 可以直接用$ 自增符号 -->
+    <!-- .demo$*5  -->
+    <div class="demo1"></div>
+    <div class="demo2"></div>
+    <div class="demo3"></div>
+    <div class="demo4"></div>
+    <div class="demo5"></div>
+    
+    <!-- 如果想要在生成的标签内部写内容可以用{} 表示 -->
+    <!-- div{键盘敲烂 月薪过万} -->
+    <div>键盘敲烂 月薪过万</div>
+    <!-- div{$}*5  -->
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+
+</body>
+</html>

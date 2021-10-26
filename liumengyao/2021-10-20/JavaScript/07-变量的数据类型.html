@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // js是动态语言 变量的数据类型可以变化
+        var x = 10;  // num
+        x = 'Arkin';  //string
+
+        // 简单数据类型：Number, String, Boolean, Undefined, Null
+        // 复杂数据类型：object
+
+        // Number:包含整数和浮点数
+        // JS中: 八进制前面加 0   十六进制前面加 0x
+        // Number.MAX_VALUE 最大值  Number.MIN_VALUE 最小值
+        // 无穷大 Infinity   无穷小 -Infinity
+        // NaN 非数值
+        console.log(isNaN(12));       // false  是数字
+        console.log(isNaN('Arkin'));  //true    不是数字
+
+        // String 字符串型
+        var str = "键盘敲烂 '!' 月薪过万";   // 外双内单
+        var str = '键盘敲烂 "!" 月薪过万';  // 外单内双
+        // 字符串转义字符  用 \ 开头   但是转义字符要包含在引号中
+
+        // Boolean 布尔型
+        var flag = true;         //布尔型
+        var flag1 = false;       //布尔型
+        console.log(flag + 1);   //2  参与加法运算时 true 被看作 1
+        console.log(flag1 + 1);  //1  参与加法运算时 false 被看作 0
+
+        // 如果一个变量未赋值 就是undefined  未定义数据类型
+        var yourDream;
+        console.log(yourDream);
+        var ourDream = undefined;
+        console.log(ourDream + 'Arkin');  // undefinedArkin
+        console.log(ourDream + 1);       //NaN  undefined 和数字相加 结果为NaN
+        console.log(ourDream + true);    //NaN
+
+        // null 空值
+        var space = null;
+        console.log(space + 'Arkin');   //nullArkin
+        console.log(space + 1);         //1
+        console.log(space + true);      //1
+
+
+        // typeof 获取数据类型        
+        // typeof是一个关键字 可以不加括号
+        var num = 20000;
+        var isAchieve = false;
+        var myName = Arkin;
+        var herDream = undefined;
+        var timer = null;
+        console.log(typeof num);        // number
+        console.log(typeof myName);     // string
+        console.log(typeof isAchieve);  // boolean
+        console.log(typeof herDream);   // undefined
+        console.log(typeof timer);      // object
+
+        var yourAge = prompt('请输入您的年龄');
+        console.log(yourAge);           // 18
+        console.log(typeof yourAge);    // string
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
