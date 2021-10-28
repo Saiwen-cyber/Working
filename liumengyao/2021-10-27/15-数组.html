@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1.数组（Array）
+        // 2. 利用new创建数组
+        var arr = new Array();   // 创建了一个新数组
+
+
+        // 3.利用数组字面量创建数组
+        var arr1 = [];   // 创建了一个空的数组
+        var arr2 = [1, true, '张三','李四','王五'];  // 创建了一个带初始值的数组
+        // 4.数组中的数据用逗号分隔
+        // 5.数组中的数据成为数组元素  数组中的元素可以是任意类型的
+        
+
+        // 6.获取数组中的元素
+        console.log(arr2);
+        console.log(arr2[1]);  // true
+        console.log(arr2[2]);  // 张三
+        console.log(arr2[5]);  // 没有这个元素，输出undefined
+
+        
+        // 7.遍历数组
+        for (var i = 0; i < 5; i++){
+            console.log(arr2[i]);
+        }
+        
+
+        // 8.数组长度
+        console.log(arr2.length);
+        // 数组的长度是元素个数，不能与索引号混淆
+        // arr.lenth  动态监测数组元素的个数
+
+
+        // 9.案例：求数组中的最大值
+        var arr3 = [2,6,1,77,52,25,7];
+        var max = arr3[0];
+        for(var i = 1; i<arr3.length;i++){
+            if(arr3[i] > max){
+                max = arr3[i];
+            }
+        }
+        console.log('最大值是:' + max);
+
+
+        // 10. 数组转换为字符串
+        var arr4 = ['arkin', 'will','挣大钱'];
+        var str = '';    // 句子
+        var sep = ' ';   // 分隔符   
+        for(var i = 0;i<arr4.length;i++){
+            str += arr4[i] + sep;
+        }
+        console.log(str);
+
+
+        // 11.数组中新增元素
+        // 11.1 修改length长度来实现数组扩容
+        var arr5 = ['red','green','blue'];
+        arr5.length = 5;   // 把数组长度修改为 5
+        console.log(arr5);   //输出  ['red','green','blue',empty*2] 
+        console.log(arr5[4]);  //undefined
+        // 11.2 修改数组索引追加元素
+            // 索引号未占用时追加
+            // 索引号已占用时替换
+        var arr6 = ['red','green','blue'];
+        arr6[3] = 'yellow';  
+        console.log(arr6[3]);  // yellow
+        // arr6 = 'arkin';
+            // 不能直接给数组名赋值，否则会覆盖掉之前的数据
+        
+
+        // 12.翻转数组
+        var oldArr = ['red','green','blue','purple','pink'];
+        var newArr = [];
+        for(var i = oldArr.length-1; i>=0; i--){
+            newArr[newArr.length] = oldArr[i];
+        }
+        console.log(newArr);
+
+
+        // 13.冒泡排序
+        var arr7 = [5,9,11,75,3,1];
+        //外层循环指定循环趟数
+        for(var i = 0; i<arr7.length; i++) {  
+            //内层循环指定每一趟交换次数
+            for(var j = 0; j<arr7.length-i; j++) {
+                // 内部交换两个变量的值，前一个和后边一个数组元素比较
+                if(arr7[j] > arr7[j+1]){
+                    var temp = arr7[j];
+                    arr7[j] = arr7[j+1];
+                    arr7[j+1] = temp;
+                }
+            }
+        }
+        console.log('冒泡排序：'+arr7);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
