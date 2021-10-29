@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a4f16307-4115-4885-82e3-a4bb25c75b54" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1zPMDsRCK1D7RMTawdcKctnWtqd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/lib" />
+  </component>
+  <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.liujun.demo01" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Documents\学习资料\前端学习\code\thread-stuly\src\com\lib" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.TestSleep2">
+    <configuration name="ExampleLamda" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.liujun.lambda.ExampleLamda" />
+      <module name="thread-stuly" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.liujun.lambda.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StacticProxy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.liujun.demo03.StacticProxy" />
+      <module name="thread-stuly" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.liujun.demo03.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestLamda" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.liujun.lamda.TestLamda" />
+      <module name="thread-stuly" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.liujun.lambda.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestSleep2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.liujun.stopthread.TestSleep2" />
+      <module name="thread-stuly" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.liujun.stopthread.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestStop" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.liujun.stopthread.TestStop" />
+      <module name="thread-stuly" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.liujun.stopthread.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TestSleep2" />
+        <item itemvalue="Application.TestStop" />
+        <item itemvalue="Application.ExampleLamda" />
+        <item itemvalue="Application.TestLamda" />
+        <item itemvalue="Application.StacticProxy" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a4f16307-4115-4885-82e3-a4bb25c75b54" name="Default Changelist" comment="" />
+      <created>1634045152954</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1634045152954</updated>
+      <workItem from="1634045158070" duration="1275000" />
+      <workItem from="1634281697204" duration="6000" />
+      <workItem from="1634289056771" duration="1329000" />
+      <workItem from="1634390151471" duration="1429000" />
+      <workItem from="1634546584027" duration="698000" />
+      <workItem from="1634608810527" duration="4371000" />
+      <workItem from="1634629211457" duration="70000" />
+      <workItem from="1635167675941" duration="8418000" />
+      <workItem from="1635420402859" duration="1196000" />
+      <workItem from="1635423812992" duration="3606000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="766" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1635424784207">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="766" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1635424784207" />
+    <state width="1237" height="191" key="GridCell.Tab.0.bottom" timestamp="1635425466553">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="191" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1635425466553" />
+    <state width="1237" height="191" key="GridCell.Tab.0.center" timestamp="1635425466553">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="191" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1635425466553" />
+    <state width="1237" height="191" key="GridCell.Tab.0.left" timestamp="1635425466552">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="191" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1635425466552" />
+    <state width="1237" height="191" key="GridCell.Tab.0.right" timestamp="1635425466553">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="191" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1635425466553" />
+    <state width="1237" height="91" key="GridCell.Tab.1.bottom" timestamp="1634301622255">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="91" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1634301622255" />
+    <state width="1237" height="91" key="GridCell.Tab.1.center" timestamp="1634301622255">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="91" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1634301622255" />
+    <state width="1237" height="91" key="GridCell.Tab.1.left" timestamp="1634301622255">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="91" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1634301622255" />
+    <state width="1237" height="91" key="GridCell.Tab.1.right" timestamp="1634301622255">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="91" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1634301622255" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1635424297210">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1635424297210" />
+  </component>
+</project>
