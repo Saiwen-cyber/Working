@@ -1,10 +1,4 @@
-## 算法
 
->链表转置：递归-迭代
-
-> 循环链表：快慢指针法
-
-```js
 /**
  * leetcode: 如果链表中有某个节点，可以通过连续跟踪 next 指针再次到达，则链表中存在环。
  * @param {ListNode} head
@@ -22,6 +16,3 @@ var hasCycle = function(head) {
     }
     return false
 };
-
-```
-
