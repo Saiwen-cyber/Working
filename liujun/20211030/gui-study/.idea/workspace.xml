@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="5900a0cc-2d07-44b1-8cff-1774479bae19" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="gui-study" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1xu5Fk1K8y7tmQkv9WI5WBiR1KO" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/liu/lesson05" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Documents\学习资料\前端学习\code\gui-study\src\com\liu\lesson05" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.StartGame">
+    <configuration name="FrameTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.liu.lesson06.FrameTest" />
+      <module name="gui-study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.liu.lesson06.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JButtonDemo01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.liu.lesson05.JButtonDemo01" />
+      <module name="gui-study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.liu.lesson05.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JPanelDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.liu.lesson05.JPanelDemo" />
+      <module name="gui-study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.liu.lesson05.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LogCal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.liu.lesson06.LogCal" />
+      <module name="gui-study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.liu.lesson06.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StartGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.liu.snake.StartGame" />
+      <module name="gui-study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.liu.snake.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.StartGame" />
+        <item itemvalue="Application.JPanelDemo" />
+        <item itemvalue="Application.JButtonDemo01" />
+        <item itemvalue="Application.LogCal" />
+        <item itemvalue="Application.FrameTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5900a0cc-2d07-44b1-8cff-1774479bae19" name="Default Changelist" comment="" />
+      <created>1631192030311</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1631192030311</updated>
+      <workItem from="1631192032028" duration="8808000" />
+      <workItem from="1631345856365" duration="8932000" />
+      <workItem from="1631416385710" duration="9139000" />
+      <workItem from="1631788957754" duration="6717000" />
+      <workItem from="1631846365977" duration="2700000" />
+      <workItem from="1632811954234" duration="4458000" />
+      <workItem from="1632874583116" duration="163000" />
+      <workItem from="1632876903435" duration="195000" />
+      <workItem from="1632878573992" duration="250000" />
+      <workItem from="1634005643124" duration="1455000" />
+      <workItem from="1634043944225" duration="727000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser" timestamp="1631795468352">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="446" y="49" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1631795468352" />
+    <state width="1237" height="149" key="GridCell.Tab.0.bottom" timestamp="1634007106262">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="149" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1634007106262" />
+    <state width="1237" height="149" key="GridCell.Tab.0.center" timestamp="1634007106262">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="149" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1634007106262" />
+    <state width="1237" height="149" key="GridCell.Tab.0.left" timestamp="1634007106262">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="149" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1634007106262" />
+    <state width="1237" height="149" key="GridCell.Tab.0.right" timestamp="1634007106262">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="149" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1634007106262" />
+    <state width="1237" height="204" key="GridCell.Tab.1.bottom" timestamp="1631247362784">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="204" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1631247362784" />
+    <state width="1237" height="204" key="GridCell.Tab.1.center" timestamp="1631247362784">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="204" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1631247362784" />
+    <state width="1237" height="204" key="GridCell.Tab.1.left" timestamp="1631247362784">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="204" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1631247362784" />
+    <state width="1237" height="204" key="GridCell.Tab.1.right" timestamp="1631247362784">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="204" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1631247362784" />
+    <state x="28" y="0" key="new project wizard" timestamp="1634045151969">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="28" y="0" key="new project wizard/0.0.1280.680@0.0.1280.680" timestamp="1634045151969" />
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1631848058859">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1631848058859" />
+  </component>
+</project>
