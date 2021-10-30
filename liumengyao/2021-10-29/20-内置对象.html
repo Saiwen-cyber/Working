@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1.什么是内置对象
+            // JS三种对象：自定义对象、内置对象、浏览器对象
+            // 内置对象：JS自带的一些对象，提供了最基本而必要的功能
+            // 内置对象有 Math、Array等
+
+
+        // 2.查文档
+            // MDN和W3C等   更常用 MDN
+
+
+        // 3. Math 对象
+            // Math数学对象 不是一个构造函数 不需要 new 来创建 直接调用里面的属性和方法
+            console.log(Math.PI);
+
+            // 封装自己的数学对象
+            var myMath = {
+                PI: 3.141592653,
+
+                max: function(){
+                    var max = arguments[0];
+                    for(var i = 1;i<arguments.length;i++){
+                        if(arguments[i]>max){
+                            max = arguments[i];
+                        }
+                    }
+                    return max;
+                },
+
+                min: function(){
+                    var min = arguments[0];
+                    for(var i = 1;i<arguments.length;i++){
+                        if(arguments[i]<min){
+                            min = arguments[i];
+                        }
+                    }
+                    return min;
+                },
+            }    
+
+            // Math.abs() 绝对值方法  会有隐式转换
+            console.log(Math.abs(-1));    // 1
+            console.log(Math.abs(1));     // 1
+            console.log(Math.abs('-1'));  // 1
+            console.log(Math.abs('aa'));  // NaN
+
+            // 三个取整方法
+                // (1) Math.floor()  向下取整 往小了取
+                // (2) Math.ceil()   向上取整 往大了取
+                // (3) Math.round()  四舍五入 Math.round(1.5)=2
+
+            // random() 随机数方法
+                // Math.random() 随机生成一个[0,1)的小数
+                // 方法没有参数
+
+                // 得到两个数间的随机整数 并且包含这两个整数
+                // Math.floor(Math.random() * (max - min + 1)) + min;
+                function getRandom(min, max) {  // 返回min max 之间的随机整数
+                    return Math.floor(Math.random() * (max - min + 1)) + min;
+                }
+                console.log(getRandom(1,20));
+
+
+        // 4. Date 日期对象 
+        // 是一个构造函数 必须使用 new 来调用创建日期对象
+
+            // 4.1 使用 Date  // 如果没有参数 则返回系统当前的时间
+                var date = new Date();
+                console.log(date);
+
+            // 4.2 参数的常用写法
+                // (1) 数字型   2021,10,29   输出的月份要大1
+                var date1 = new Date(2021,10,1);
+                console.log(date1);  //2021.11.1
+
+                // (2) 字符串型 '2021-10-29 11:00:00'  最常用
+                var date2 = new Date('2021-10-29 11:00:00');
+                console.log(date2);
+
+            // 4.3 日期格式化
+                var date3 = new Date();
+                console.log(date3.getFullYear());// 获取当前的年
+                console.log(date3.getMonth()+1); // 获取当前的月 (0-11) 
+                console.log(date3.getDate());    // 获取当前的日
+                console.log(date3.getDay());     // 获取星期几 周日0 - 周六6
+                console.log(date3.getHours());   // 获取当前的小时数
+                console.log(date3.getMinutes()); // 获取当前的分钟数
+                console.log(date3.getSeconds()); // 获取当前的秒数
+
+            // 4.4 获得Date的总毫秒数 (时间戳 永远不会重复)
+            //  ( 距离 1970-1-1 过了多少毫秒 )
+                // (1) 通过valueOf() 或者 getTime()
+                var date4 = new Date();
+                console.log(date4.valueOf());
+                console.log(date4.getTime());
+
+                // (2) +new Date()  返回的就是总毫秒数
+                var date5 = +new Date();
+                console.log(date5);
+
+                // (3) Date.now()    h5新增的方法
+                console.log(Date.now());
+
+            // 4.5 倒计时
+                // d = parseInt(总秒数 / 60 / 60 / 24); //计算天数
+                // h = parseInt(总秒数 / 60 / 60 % 24); //计算小时
+                // m = parseInt(总秒数 / 60 % 60);      //计算分钟
+                // s = parseInt(总秒数 % 60 );          //计算当前秒数
+                function conutDown(time) {
+                    var nowTime = +new Date();// 返回当前毫秒数
+                    var inputTime = +new Date(time);// 返回的是用户输入时间总的毫秒数
+                    var times = (inputTime - nowTime)/1000;// 剩余的总秒数  
+                    var d = parseInt(times / 60 / 60 / 24); //计算天数
+                    d = d < 10 ? '0'+d : d;
+                    var h = parseInt(times / 60 / 60 % 24); //计算小时
+                    h = h < 10 ? '0'+h : h;
+                    var m = parseInt(times / 60 % 60);      //计算分钟
+                    m = m < 10 ? '0'+m : m;
+                    var s = parseInt(times % 60 );          //计算当前秒数
+                    s = s < 10 ? '0'+s : s;
+                    
+                    return d + '天' + h + '时' + m + '分' + s + '秒';
+                }
+                console.log(conutDown('2021-11-11 00:00:00'));
+
+
+        // 5. Array 数组对象
+            // 5.1 创建数组对象
+                // (1) 利用数组字面量创建
+                var arr = [1,2,3];
+                console.log(arr[0]);
+
+                // (2) 利用 new Array()
+                var arr1 = new Array();   //创建了一个空数组
+                var arr2 = new Array(2);  //创建了一个空数组 但有两个空元素
+                var arr3 = new Array(2,3);// 等价于 [2,3] 有两个数组元素 2 3
+            
+            // 5.2 检测是否为数组
+                // (1) instanceof 运算符 
+                var arr4 = [];
+                var obj = {};
+                console.log(arr4 instanceof Array);// true
+                console.log(obj instanceof Array);// false
+
+                // (2) Array.isArray(参数);  h5新增的方法 ie9以上的版本支持
+                console.log(Array.isArray(arr4));  // true
+                console.log(Array.isArray(obj));  // false
+
+            // 5.3 添加数组元素
+                // (1) push() 在数组末尾添加一个或多个元素
+                    // 原数组也会发生变化
+                    // 参数直接写参数就可以
+                var arr5 = [1,2,3];
+                arr5.push(4,5);
+                console.log(arr5);
+
+                // (2) unshift()  在数组开头添加一个或者多个元素
+                    // 原数组也会发生变化
+                    // 参数直接写参数就可以
+                var arr6 = [1,2,3];
+                arr6.unshift(4,5);
+                console.log(arr6);
+
+            // 5.4 删除数组元素
+                // (1) pop()  删除数组最后一个元素  不带参数
+                    // 原数组也会发生变化
+                    // 没有参数
+                    // 只能删除一个
+                console.log(arr6.pop()); //返回删除的元素
+                arr6.pop();
+                console.log(arr6);       // 返回删除最后一个之后的数组
+
+                // (2) shift()   删除数组最后一个元素  不带参数
+                    // 原数组也会发生变化
+                    // 没有参数
+                    // 只能删除一个
+
+            // 5.5 数组排序
+                // (1) Array.reverse()  翻转数组
+                var arr7 = [1,2,3];
+                arr7.reverse();
+                console.log(arr7);
+
+                // (2) sort()  数组排序(冒泡排序)
+                    // 只能排第一个数  1,13,4...  
+                var arr8 = [99,2,4,7,55,14,43];
+                arr8.sort();
+                console.log(arr8);
+
+                    // 可以都排
+                var arr9 = [99,2,4,7,55,14,43,1];
+                arr9.sort(function(a,b){
+                    return a - b;  //升序
+                    // return b - a;  //降序
+                });
+                console.log(arr9);
+
+            // 5.6 数组索引
+                // (1) indexOf(数组元素)  返回该数组元素的索引号(从前面开始查)
+                    // 只返回第一个满足条件的索引号
+                    // 如果没找到该元素 则返回 -1 
+
+                // (2) lastIndexOf(数组元素)  返回该数组元素的索引号(从后面开始查)
+                    // 只返回第一个满足条件的索引号
+                    // 如果没找到该元素 则返回 -1 
+
+            // 5.7 数组去重
+                function unique(arr) {
+                    var newArr = [];
+                    for(var i = 0; i < arr.length; i++){
+                        if(newArr.indexOf(arr[i]) === -1){
+                            newArr.push(arr[i]);
+                        }
+                    }
+                }
+            
+            // 5.8 数组转换为字符串
+                // (1) toString()  将数组转换为字符串
+                var arr = ['red','green','blue'];
+                console.log(arr.toString());
+
+                // (2) join(分隔符)  分隔符默认为 ,
+                console.log(arr.join());   // red,green,blue
+                console.log(arr.join('-'));// red-green-blue
+
+
+        // 6. 字符串对象
+            // 6.1 基本包装类型
+                // 把简单数据类型包装成为了复杂数据类型
+                var str = 'andy';
+                console.log(str.length);
+                // (1) 把简单数据类型包装为复杂数据类型
+                var temp = new String('andy');
+                // (2) 把临时变量的值给 str
+                str = temp;
+                // (3) 销毁这个临时变量
+                temo = null;
+
+            // 6.2 字符串的不可变性
+                // 指的是里面的值不可变，虽然看上去可以改变内容，但其实地址变了，内存中新开辟了一个内存空间
+
+            // 6.3 根据字符返回位置
+                // (1) str.indexOf('要查找的字符', [起始的位置])
+                var str1 = '改革春风吹满地, 春天来了'; 
+                console.log(str1.indexOf('春'));
+                console.log(str1.indexOf('春'),3);
+
+                // (2) str.lastIndexOf('要查找的字符')
+
+            // 6.4 根据位置返回字符
+                // (1) charAt(index) 根据位置返回字符
+                var str2 = 'a中国人民真争气';
+                console.log(str2.charAt(3));
+
+                // (2) charCodeAt(index)  获取指定位置处的字符的ASCII码(index索引号)
+                console.log(str2.charCodeAt(0));  // 97
+
+                // (3) str[index]  h5 新增的
+                console.log(str2[0]);    // a
+
+            // 6.5 统计出现次数最多的字符 以及对应的次数
+                var str3 = 'abcoefoxyozzopp';
+                var o = {};   //对象
+                for(var i = 0; i < str3.length; i++){
+                    var chars = str3.charAt(i);  // chars 是字符串的每一个字符
+                    if(o[chars]) {   // o[chars] 得到的是属性值
+                        o[chars]++;
+                    }else{
+                        o[chars] = 1;
+                    }
+                }
+                console.log(o);
+                
+                //遍历对象
+                var max = 0;
+                var ch = '';
+                for(var k in o){
+                    // k 得到的是属性名
+                    // o[k] 得到的是属性值
+                    if(o[k]>max){
+                        max = o[k];
+                        ch = k;
+                    }
+                }
+                console.log(max);
+                console.log('最多的字符是' + ch);
+
+            // 6.6 字符串操作方法
+                // (1) concat(str1,str2...); 拼接字符串  等效于 + 
+                var str4 = 'Arkin';
+                console.log(str4.concat(' would become rich'));
+
+                // (2) substr(start, length) 从strat开始取length个字符
+                var str5 = '改革春风吹满地';
+                console.log(str5.substr(2,5));   // 春风吹满地
+
+                // (3) slice(start, end)  取索引号在 [strat,end) 中的字符
+                // (4) substring(start, end) [start,end)   但不接受负值
+
+            // 6.7 替换字符
+                // replace('被替换的字符','替换成的字符')
+                // 只会替换第一个匹配的字符 若要全部替换可以加入循环
+                var str6 = 'andy';
+                console.log(str6.replace('a','b'));
+
+            // 6.8 字符串转换为数组
+                // split('分隔符')
+                // 前面学过join把数组转化为字符串
+                var str7 = 'red&green&blue';
+                console.log(str7.split('&'));
+
+            // 6.9 切换大小写
+                // toUpperCase()  //转换大写
+                // toLowerCase()  //转换小写
+
+        // 7. 简单数据类型和复杂数据类型
+            // 7.1 简单数据类型 ( 基本数据类型、值类型 )
+                // 在存储时变量中存储的是值本身，因此叫做值类型
+                // string, number, boolean, undefined, null(typeof 会返回空对象)
+                // 如果有个变量之后打算存储为对象，但没想好放什么 可以赋值为 null
+
+            // 7.2 堆和栈
+                // (1) 简单数据类型存放到 栈 中，里面直接开辟一个空间，存放的是值
+                // (2) 复杂数据类型存放到 堆 中，首先在栈里面存放一个十六进制表示的地址，真正的对象实例存放在堆中
+
+            // 7.3 简单数据类型传参
+                // 函数的形参可以看作是一个变量，把一个值类型变量传递给函数的形参时，其实是把变量在栈空间中的值复制了一份给形参，在方法内部对形参做修改不会影响到原本的变量。
+
+            // 7.4 复杂数据类型传参
+                // 函数的形参也可以看作是一个变量，当我们把引用类型变量传给形参时，其实是把变量在栈空间中保存的堆地址复制给了形参，保存的同一个堆地址，所以操作的是同一个对象。
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

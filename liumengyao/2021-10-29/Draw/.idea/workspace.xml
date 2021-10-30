@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8803c7cf-da0f-4db0-a49b-073176d5c418" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="204PWPsLwSFDSgEJTQgSZ0FXdW7" />
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/DrawDemo/src/icons" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workspace\IdeaProjects\Draw\DrawDemo\src\icons" />
+      <recent name="D:\workspace\IdeaProjects\Draw\DrawDemo\src" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\IdeaProjects\Draw\DrawDemo\src\icons" />
+      <recent name="D:\workspace\IdeaProjects\Draw\DrawDemo" />
+      <recent name="D:\workspace\IdeaProjects\Draw\DrawDemo2\src" />
+      <recent name="D:\workspace\IdeaProjects\Draw\DrawDemo\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Draw">
+    <configuration name="Demo1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Demo1" />
+      <module name="DrawDemo1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Draw" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Draw" />
+      <module name="DrawDemo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value=".*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StartProject" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.edu.nwafu.start.StartProject" />
+      <module name="DrawDemo2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cn.edu.nwafu.start.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Draw" />
+        <item itemvalue="Application.StartProject" />
+        <item itemvalue="Application.Demo1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8803c7cf-da0f-4db0-a49b-073176d5c418" name="Default Changelist" comment="" />
+      <created>1635300917617</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1635300917617</updated>
+      <workItem from="1635300920504" duration="20301000" />
+      <workItem from="1635391655647" duration="11455000" />
+      <workItem from="1635490800954" duration="4866000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="622" y="68" key="#Project_Structure" timestamp="1635302144057">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="622" y="68" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1635302144057" />
+    <state x="913" y="127" key="#com.intellij.ide.util.MemberChooser" timestamp="1635382620943">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="913" y="127" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1635382620943" />
+    <state width="1493" height="178" key="GridCell.Tab.0.bottom" timestamp="1635497528490">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="178" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1635497528490" />
+    <state width="1493" height="178" key="GridCell.Tab.0.center" timestamp="1635497528489">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="178" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1635497528489" />
+    <state width="1493" height="178" key="GridCell.Tab.0.left" timestamp="1635497528489">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="178" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1635497528489" />
+    <state width="1493" height="178" key="GridCell.Tab.0.right" timestamp="1635497528490">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="178" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1635497528490" />
+    <state width="764" height="129" key="GridCell.Tab.1.bottom" timestamp="1635391629803">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="764" height="129" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1635391629803" />
+    <state width="764" height="129" key="GridCell.Tab.1.center" timestamp="1635391629803">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="764" height="129" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1635391629803" />
+    <state width="764" height="129" key="GridCell.Tab.1.left" timestamp="1635391629803">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="764" height="129" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1635391629803" />
+    <state width="764" height="129" key="GridCell.Tab.1.right" timestamp="1635391629803">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="764" height="129" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1635391629803" />
+    <state x="540" y="48" key="SettingsEditor" timestamp="1635302684152">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="540" y="48" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1635302684152" />
+    <state x="796" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1635391657769">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="796" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1635391657769" />
+    <state x="-31" y="22" width="730" height="729" key="dock-window-1" timestamp="1635492212602">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="-31" y="22" width="730" height="729" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1635492212602" />
+    <state x="356" y="19" key="new project wizard" timestamp="1635304450169">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="356" y="19" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1635304450169" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1635404535355">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1635404535355" />
+    <state x="764" y="74" width="672" height="676" key="search.everywhere.popup" timestamp="1635492129087">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="764" y="74" width="672" height="676" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1635492129087" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="iconPath" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
