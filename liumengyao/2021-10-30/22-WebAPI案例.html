@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box_jd {
+            position: relative;
+            width: 300px;
+            border-bottom: 1px solid #ccc;
+            margin: 100px auto;
+        }
+        .box_jd input {
+            width: 270px;
+            height: 30px;
+            border: 0;
+            outline: none;   /* 去掉蓝色框 */ 
+        }
+        .box_jd img {
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            width: 24px;
+        }
+
+        .box_tao {
+            color: #f40;
+            text-align: center;
+            font-size: 12px;
+            margin: 100px auto;
+            border: 1px solid #ccc;
+            height: 88px;
+            width: 74px;
+            position: relative;
+        }
+        .box_tao img {
+            width: 60px;
+            margin-top: 5px;
+        }
+        #btn {
+            position: absolute;
+            top: -1px;
+            left: -16px;
+            width: 14px;
+            height: 14px;
+            border: 1px solid #ccc;
+            line-height: 14px;
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+        }
+
+        input {
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="box_jd">
+        <label for="">
+            <img src="images/eye_close.png" id="eye">
+        </label>
+        <input type="password" id="pwd">
+    </div>
+
+    <div class="box_tao">
+        淘宝二维码
+        <img src="images/code.png">
+        <i id="btn">x</i>
+    </div>
+
+    <!-- 显示隐藏文本框内容 -->
+    <input type="text" value="变有钱" id="hide">
+
+    <script>
+        // JD
+        // 1.获取元素
+        var eye = document.getElementById('eye');
+        var pwd = document.getElementById('pwd');
+        // 2.注册事件 处理程序
+        var flag = 0;
+        eye.onclick = function() {
+            if(flag == 0){
+                pwd.type = 'text';
+                eye.src = 'images/eye_open.png';
+                flag = 1;
+            } else{
+                pwd.type = 'password';
+                eye.src = 'images/eye_close.png';
+                flag = 0;
+            }
+            
+        }
+        
+        // TB
+        // 1.获取元素
+        var btn = document.getElementById('btn');
+        var box_tao = document.getElementById('box_tao');
+        // 2.注册事件 处理程序
+        btn.onclick = function() {
+            box_tao.style.display = 'none';
+        }
+
+
+        // 显示隐藏文本框内容
+        // 1.获取元素
+        var text = document.querySelector('input');
+        // 2.注册事件 获得焦点事件 onfocus
+        text.onfocus = function() {
+            if(this.value === '变有钱'){
+                this.value = '';
+            }
+            this.style.color = '#333';
+        }
+
+        // 3.注册事件 失去焦点事件 onblur
+        text.onblur = function() {
+            if(this.value === ''){
+                this.value = '变有钱';
+            }
+            this.style.color = '#999';
+        }
+
+    </script>
+</body>
+</html>
