@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //1.新增数组元素，修改length长度
+        var arr=[1,2,3];
+        arr.length=5;
+        console .log(arr.length);  //5
+        console .log(arr);  //[1, 2, 3, empty × 2]
+        console.log(arr[3]);  //undifined
+        //2.修改数组索引新增数组元素  追加数组元素
+        var arr1=[1,2,3];
+        arr1[3]='liruixin';
+        console.log(arr1);  //[1, 2, 3, 'liruixin']
+        arr1[0]='xin';    //替换原来的数组元素
+        console.log(arr1);  //['xin', 2, 3, 'liruixin']
+        //不要给数组名赋值 否则里面的数组元素都没有了
+        arr1='大美女'
+        console.log(arr1);   //大美女
+    </script>
+</head>
+<body>
+
+</body>
+</html>

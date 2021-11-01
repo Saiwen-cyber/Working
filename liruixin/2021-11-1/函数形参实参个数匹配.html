@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function getSum(str1,str2) {
+            console.log(str1 + str2);
+
+        }
+        //1.如果实参的个数和形参的个数一致 则正常输出结果
+        getSum(1,27); //28
+        //2.如果实参的个数大于形参的个数，会取到形参的个数
+        getSum(1,2,3);  //3
+        //2.如果实参的个数小于形参的个数，NaN
+        getSum(1);  //相当于 undefined+1 结果是NaN
+    </script>
+</head>
+<body>
+
+</body>
+</html>

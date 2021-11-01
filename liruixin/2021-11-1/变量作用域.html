@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //全局变量哪里都可以调用 局部变量只能在函数中调用 但是函数中未声明直接赋值的变量可以被看作全局变量
+        //函数形参可以看作局部变量
+        //全局变量比较占内存，浏览器关闭才销毁
+        //局部变量函数执行完毕就销毁，节约资源
+
+        function lrx() {
+            num1=3;
+        }
+        console.log(num1);   //3
+    </script>
+</head>
+<body>
+
+</body>
+</html>
