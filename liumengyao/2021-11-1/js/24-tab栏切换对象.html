@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="tab">
+        <div class="tab_list">
+            <ul>
+                <li class="current">产品介绍</li>
+                <li>规格与包装</li>
+                <li>售后保障</li>
+                <li>商品评价</li>
+                <li>手机社区</li>
+            </ul>
+        </div>
+        <div class="tab_con">
+            <div class="item" style="display: block;">
+                产品介绍模块内容
+            </div>
+            <div class="item">
+                规格与包装模块内容
+            </div>
+            <div class="item">
+                售后保障模块内容
+            </div>
+            <div class="item">
+                商品评价模块内容
+            </div>
+            <div class="item">
+                手机社区模块内容
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 1.被选择的底色变红
+        // 获取元素
+        var tab_list = document.querySelector('.tab_list');
+        var lis = tab_list.querySelectorAll('li');
+        var items = document.querySelectorAll('.item');
+        // for 绑定点击事件
+        for(var i = 0;i<lis.length;i++){
+            // 设置索引号
+            lis[i].setAttribute('index',i);
+
+            lis[i].click = function(){
+                // 1.排他思想 设置点击后的模块背景色为红色
+                for(var j = 0; j<lis.length; j++){
+                    lis[i].className = '';
+                }
+                this.className = 'current';
+
+                // 2.下面的显示内容模块
+                var index = this.getAttribute('index');
+                for(var j = 0; j<lis.length; j++){
+                    items[j].style.display = 'none';
+                }
+                items[index].style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
