@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var i,j=0;
+        var t;
+        var arr=[5,4,3,2,1];
+        for(i=0;i<arr.length;i++){  //外层元素管趟数 五个元素比四趟
+            for(j=0;j<arr.length-i;j++){ //内层元素比次数 一趟比一趟少一次 因为前一个的元素位置固定了
+                if(arr[j]>arr[j+1]){
+                    t=arr[j+1];
+                    arr[j+1]=arr[j];
+                    arr[j+1]=t;
+                }
+
+            }
+        }
+        console.log(arr);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

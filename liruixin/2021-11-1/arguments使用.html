@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //arguments里面存储了所有传过来的实参  展示形式是一个伪数组
+        function fn() {  //只有函数才有arguments对象 而且每个函数都内置好了这个arguments
+            console.log(arguments);
+            console.log(arguments.length);
+            console.log(arguments[2]);
+        }
+        fn(1,2,3);  //传三个有三个,传五个有五个
+        //伪数组并不是真正意义上的数组
+        //1.具有数组的length属性
+        //2.按照索引的方式存储的
+        //3.没有真正数组的一些方法pop(), push()等等
+    </script>
+</head>
+<body>
+
+</body>
+</html>
