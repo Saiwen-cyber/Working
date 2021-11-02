@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div8_5 {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+<!-- 1. API (应用程序编程接口) -->
+<!--    是一些预先定义的函数 -->
+
+<!-- 2. Web API -->
+<!--    是浏览器提供的一套操作浏览器功能和页面元素的API(BOM、DOM) -->
+
+<!-- 3. DOM -->
+<!--    3.1 DOM文档对象模型 （修改网页的样式、结构、模型等） -->
+<!--    3.2 DOM树 -->
+<!--        (1) 文档: 一个页面就是一个文档 用 document表示 -->
+<!--        (2) 元素: 页面中所有标签都是元素 用 element表示 -->
+<!--        (3) 节点 网页中所有内容都是节点(标签、属性等) 用 node表示 -->
+
+
+<!-- 4.获取元素 -->
+<!--    4.1 getElementById() 获取带有ID的元素对象 -->
+
+        <div id="time">2021-10-30</div>
+        <script>
+            // 1. 文档页面从上往下加载 得先有标签 才可以操纵
+            // 2. 参数 id 是大小写敏感的字符串
+            // 3. 返回的是一个元素对象
+            var timer = document.getElementById("time");
+            console.log(timer);
+            console.log(typeof timer);
+            // console.dir 打印返回的元素对象 更好的查看里面的属性和方法
+            console.dir(timer);
+        </script>
+
+<!--    4.2 getElementByTagName() 返回带有指定标签名的对象的集合 -->
+        <ul>
+            <li>改革春风吹满地</li>
+            <li>中国人民真争气</li>
+        </ul>
+        <script>
+            // 1. 返回的是获取过来的元素对象的集合 以伪数组的形式存储
+            var lis = document.getElementsByTagName('li');
+            console.log(lis);
+            console.log(lis[0]);
+            // 2. 遍历获得集合中的元素对象 获取到的元素是动态的
+            for(var i = 0; i<lis.length; i++){
+                console.log(lis[i]);
+            }
+            // 3. 如果页面中只有一个 li 返回的还是为数组的形式
+            // 4. 如果没有 li 返回的是空的伪数组 
+        </script>
+
+        <ol id="ol">
+            <li>改革春风吹进门</li>
+            <li>中国人民都精神</li>
+        </ol>
+        <script>
+            // 5.获取某个元素(父元素)内部所有指定标签名的子元素
+            // element.getElementsByTagName('标签名')
+            // 父元素必须是单个对象(必须指明是哪一个元素对象) 获取的时候不包括父元素自己
+            var ol = document.getElementById('ol');
+            console.log(ol.getElementsByTagName('li'));
+        </script>
+
+<!--    4.3 通过HTML5新增的方法获取 -->
+        <div class="box">盒子</div>
+        <div class="box">盒子</div>
+        <div id="nav">
+            <ul>
+                <li>首页</li>
+                <li>产品</li>
+            </ul>
+        </div>
+        <script>
+            // (1) getElementByClassName('类名') 根据类名返回元素对象集合
+            var boxs = document.getElementsByClassName('box');
+            console.log(boxs);
+
+            // (2) querySeletor  返回指定选择器的第一个元素对象
+            var firstBox = document.querySelector('.box');  // class .
+            console.log(firstBox);
+            var nav = document.querySelector('#nav');       // id #
+            console.log(nav);
+            var li = document.querySelector('li');         //标签  不加
+
+            // (3) querySeletorAll  返回指定选择器的所有元素对象
+            var allBox = document.querySelectorAll('.box');  // class .
+            console.log(allBox);
+        </script>
+
+
+<!-- 5.获取特殊元素 -->
+        <script>
+            // 1. 获取body元素
+            var bodyEle = document.body;
+            console.log(bodyEle);
+            console.dir(bodyEle);
+            // 2. 获取html元素
+            var htmlEle = document.documentElement;
+            console.log(htmlEle);
+        </script>
+
+
+<!-- 6.事件三要素 -->
+        <button id="btn">Arkin</button>
+        <script>
+//    (1) 事件源  事件被触发的对象 谁 按钮
+        var btn = document.getElementById('btn');
+//    (2) 事件类型  如何触发 什么事件  比如鼠标点击（onclick) 鼠标经过 键盘按下等事件
+//    (3) 事件处理程序   通过一个函数赋值的方式完成
+        btn.onclick = function() {
+            alert('she would become rich!');
+        }
+        </script>
+
+
+<!-- 7.执行事件过程 -->
+        <div id='seven'>Arkin</div>
+        <script>
+            // (1) 获取事件源
+            var div7 = document.getElementById('seven');
+            // (2) 绑定事件 注册事件
+            // div.onclick
+            // (3) 添加事件处理程序
+            div7.onclick = function() {
+                alert('div7被点击');
+            }
+        </script>
+
+
+<!-- 8.操作元素 -->
+<!--    8.1 改变元素的内容 -->
+        <button id="btn81">显示当前系统时间</button>
+        <div id="div81">某个时间</div>
+        <p id="p8">Arkin would become rich!</p>
+
+        <script>
+            // 当我们点击了按钮之后，div中的文字发生变化
+            // 1.获取元素
+            var btn = document.getElementById('btn81');
+            var div = document.getElementById('div81');
+            // 2.注册事件
+            btn.onclick = function() {
+                div.innerText = getTime();
+            }
+
+            function getTime(){
+                var date = new Date();
+                var year = date.getFullYear();  //年
+                var month = date.getMonth() + 1; //月
+                var dates= date.getDate();  // 天
+                var arrWeek = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+                var day = date.getDay();  //星期几的索引
+                return '今天是: ' + year + '年' + month + '月' + dates + '日 ' + arrWeek[day];
+            }
+
+            // 元素也可以不用添加事件
+            var p = document.getElementById('p8');
+            p.innerText = getTime();
+        </script>
+
+
+<!--    8.2 innerText 和 innerHTML 的区别 -->
+        <div id="div82"></div>
+        <p id="p82">Arkin would become rich!</p>
+
+        <script>
+            // 1.innerText 不识别html标签   非标准   会自己去除空格和换行
+            var div82 = document.getElementById('div82');
+            div82.innerText = '<strong> 今天是：</strong> 2019';   // <strong> 今天是：</strong> 2019
+            
+            // 2.innerHTML 识别 html 标签   W3C标准
+            div82.innerHTML = '<strong> 今天是：</strong> 2019';   // 今天是： 2019  '今天是：'加粗了
+
+            // 这两个属性是可读写的 可以获取元素里面的内容   保留空格和换行 
+            var p82 = document.getElementById('p82');
+            console.log('p82中的内容：' + p82.innerText);
+
+        </script>
+
+
+<!--    8.3 修改元素属性 -->
+        <button id="zzf">张子枫</button>
+        <button id="gdg">郭德纲</button> <br>
+        <img src="images/girl.png" alt="" id="girl" >  <br>
+
+        <script>
+            // 修改元素属性 src
+            // 1.获取元素
+            var zzf = document.getElementById('zzf');
+            var gdg = document.getElementById('gdg');
+            var img = document.getElementById('girl');
+            // 2.注册事件
+            zzf.onclick = function() {
+                img.src = 'images/zzf.jpg';
+            }
+            gdg.onclick = function() {
+                img.src = 'images/girl.png';
+            }
+        </script>
+
+
+<!--    8.4 表单元素的属性操作 -->
+<!--        利用DOM可以操作如下表单元素的属性： -->
+<!--        type value checked selected disabled -->
+        <button id="btn84">按钮</button>
+        <input type="text" value="输入内容" id="input84">
+
+        <script>
+            // 1. 获取元素
+            var btn84 = document.getElementById('btn84');
+            var input84 = document.getElementById('input84');
+            // 2.注册事件 处理程序
+            btn84.onclick = function() {
+                // input.innerHTML = '点击了'   这个是普通盒子 比如 div标签里面的内容
+                input84.value = 'button8_4 被点击了';
+                // 如果想要某个表单被禁用 ，不能再点击 用 disabled
+                this.disabled = true;
+                // this 指向的是事件函数的调用者
+
+            }
+        </script>
+
+
+<!--    8.5 样式属性操作 -->
+        <div id="div8_5"></div>
+
+        <script>
+            // 1.获取元素
+            var div85 = document.getElementById('div8_5');
+            // 2.注册事件 处理程序
+            div85.onclick = function() {
+                this.style.backgroundColor = 'yellowgreen';
+                // this.style.width = '250px';
+            }
+        </script>
+</body>
+</html> 
