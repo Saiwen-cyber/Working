@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //案例1    undefined
+        var num=10;
+        fun();
+        function fun() {
+            console.log(num);
+            var num=20;
+        }
+        //相当于执行了以下操作   函数里的局部作用域也需要提升 就近原则，num只声明不赋值，所以undefined
+        var num;
+        function fun() {
+            var num;
+            console.log(num);
+             num=20;
+        }
+        num=10;
+        fun();
+
+        //案例2   undefined 20
+        var num =10;
+        function fn() {
+            console.log(num);
+            var num=20;
+            console .log(num);
+
+        }
+        fn();
+        //相当于执行了以下操作
+        var num;
+        function fn() {
+            var num;
+            console.log(num);
+            num=20;
+            console .log(num);
+
+        }
+        num=10;
+        fn();
+    </script>
+</head>
+<body>
+
+</body>
+</html>
