@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+    <button>按钮4</button>
+    <button>按钮5</button>
+
+    <div id="demo" index="1"></div>
+
+    <script>
+    // 排他思想
+        // 1.获取所有按钮元素
+        var btns = document.getElementsByTagName('button');
+        // btns的得到的是一个伪数组
+        for(var i = 0; i<btns.length; i++){
+            btns[i].onclick = function(){
+                // (1) 先把所有元素颜色取消
+                for(var j = 0; j<btns.length; j++){
+                    btns[j].style.backgroundColor = '';
+                }
+                // (2) 在设置自己的样式
+                this.style.backgroundColor = 'orange';
+            }
+        }
+
+
+    // 自定义属性操作
+        var div = document.querySelector('div');
+        // 1.获取元素的属性值
+        // (1) element.属性  获取内置属性值（元素本身自带的属性）
+        console.log(div.id);
+        // (2) element.getAttribute('属性')   获取程序员自定义的属性
+        console.log(div.getAttribute('index'));
+
+        // 2.设置元素的属性值
+        // (1) element.属性='值'  设置内置属性值
+        div.id = 'test';
+        // (2) element.setAttribute('属性','值')
+        div.setAttribute('index', 2);
+        div.setAttribute('class', 'footer');
+        
+        // 3.移除属性  removeAttribute('属性名')
+        div.removeAttribute('index');
+    </script> 
+</body>
+</html>
