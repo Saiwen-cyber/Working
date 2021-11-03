@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function Hero(name,type,blood) {
+            this.name=name;
+            this.type=type;
+            this.blood=blood;
+            this.attack=function (attack) {
+                console.log(attack);
+            };
+        }
+        var lianpo=new Hero('lianpo','力量',500);
+        var houyi=new Hero('houyi','射手',100);
+        console.log(lianpo);
+        lianpo.attack('近战');
+        console.log(houyi);
+        houyi.attack('远程');
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

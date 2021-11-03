@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //Math对象随机数方法     random()返回一个随机的小数 0<=x<1  可以取0不能取1
+        //方法里面不跟参数
+        console.log(Math.random());
+        //想要得到两个数之间的随机整数 并且包含这两个整数
+        // Math.floor(Math.random() * (max - min + 1)) + min;
+        function getRandom(min,max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min
+        }
+        console.log(getRandom(1,10));
+
+        //随机点名
+        var arr=['lrx','fz','lmy','lcy','lj','wxy']
+        console.log(arr[getRandom(0,5)]);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

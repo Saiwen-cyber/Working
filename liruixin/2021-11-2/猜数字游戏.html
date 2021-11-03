@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function getRandom(min,max) {
+            return Math.floor(Math.random() * (max-min+1)) +min;
+        }
+        var index=getRandom(1,10);
+        console.log(index);
+        var g=Number(prompt('请输入一个1-10之间的数字'));
+        while(g !=index){
+            if(g>index){
+                alert('数字大了继续猜');
+                var g=Number(prompt('请输入一个1-10之间的数字'));
+            }
+            else if(g<index){
+                alert('数字小了继续猜');
+                var g=Number(prompt('请输入一个1-10之间的数字'));
+            }
+            else
+                break;
+        }
+        alert('您猜对了');
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //格式化日期 年月日
+        var date=new Date();
+        console.log(date.getFullYear());   //获取当前年份
+        console.log(date.getMonth()+1);     //获取当月（0-11）  返回的月份小一个月
+        console.log(date.getDate());  //返回的是几号
+        console.log(date.getDay());   //返回的是星期几（0-6 0是周天，6是周六）
+        // 我们写一个2021年11月2日 星期二
+        var year=date.getFullYear();
+        var month=date.getMonth()+1;
+        var dates=date.getDate();
+        var day=date.getDay();
+        var days=['日','一','二','三','四','五','六']
+        alert('今天是'+year+'年'+month+'月'+dates+'日'+'\n'+'星期'+days[day]);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
