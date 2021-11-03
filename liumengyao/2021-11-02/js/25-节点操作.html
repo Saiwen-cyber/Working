@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 一般的，节点至少拥有nodeType(节点类型)、nodeName(节点名称)、nodeValue(节点值)这三个基本属性 -->
+    <!-- 元素节点 nodeType 为 1 -->
+    <!-- 属性节点 nodeType 为 2 -->
+    <!-- 文本节点 nodeType 为 3 (文字、空格、换行等) -->
+</head>
+<body>
+     <div class="demo">
+         <div class="box">
+             <span class="code">x</span>
+         </div>
+     </div>
+     <ul>
+         <li>li1</li>
+         <li>li2</li>
+         <li>li3</li>
+     </ul>
+
+     <ol>
+        <li>li1</li>
+        <li>li2</li>
+        <li>li3</li>
+    </ol>
+
+    <div class="bro">div</div>
+    <span>span</span>
+
+    <ul class="add">
+        <li>123</li>
+    </ul>
+
+    <button>删除</button>
+    <ul class="del">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+    <ul class="clone">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+     <script>
+        //  1.获取父节点
+        // 得到的是距离最近的父节点 如果找不到则返回 null
+        var code = document.querySelector('.code');
+        console.log(code.parentNode);
+
+        // 2.获取子节点
+            //(1) DOM提供的方法(API)获取
+            var ul = document.querySelector('ul');
+            var lis = ul.querySelectorAll('li'); 
+            //(2) 子节点
+            // childNodes中包含元素节点、文本节点等 会多出空格换行之类的东西
+            console.log(ul.childNodes);
+
+            // children 获取所有的字元素节点 实际开发常用
+            console.log(ul.children);
+        
+        // 3.子节点 第一个元素  最后一个元素
+            var ol = document.querySelector('ol');
+            // (1) firstChild 第一个子节点 不管是文本节点还是元素节点
+            console.log(ol.firstChild);
+            console.log(ol.lastChild);
+            // (2) firstElementChild 返回第一个子元素节点  ie8+
+            console.log(ol.firstElementChild);
+            console.log(ol.lastElementChild);
+            // (3) 常用写法 无兼容问题 返回第一个子元素
+            console.log(ol.children[0]);
+            console.log(ol.children[ol.children.length-1]);
+
+
+        // 4.兄弟节点
+            var bro = document.querySelector('.bro');
+            // 1.nextSibling 下一个兄弟节点  包含元素节点或者文本节点等
+            console.log(bro.nextSibling);
+            console.log(bro.previousSibling);
+            // 2.nextElementSibling  得到下一个兄弟元素节点
+            console.log(bro.nextElementSibling);
+            console.log(bro.previousElementSibling);
+
+
+        // 5. 创建和添加节点
+            // (1) 创建节点 元素节点
+            var li = document.createElement('li');
+
+            // (2) 添加节点 node.appendChild(child)  node 父级 child子级
+            var add = document.querySelector('.add');
+            add.appendChild(li);
+
+            // (3) 添加节点 node.insertBefore(child,指定元素);
+            var lili = document.createElement('li');
+            add.insertBefore(lili,add.children[0]);
+
+            // (4) 想要界面添加一个新的元素 ：先创建元素 再添加元素
+
+        // 6. 删除节点 node.removeChild(child)  删除一个节点 返回删除的节点
+            var btn = document.querySelector('button');
+            var del = document.querySelector('.del');
+            btn.onclick = function() {
+                if(del.children.length == 0) {
+                    this.disabled = true;
+                }else{
+                    del.removeChild(del.children[0]);
+                }
+            }
+
+
+        // 阻止链接跳转： <a href='javascript:;'></a>
+
+        // 7. 克隆节点 
+            var clone = document.querySelector('.clone');
+            // 1.node.cloneNode()  如果括号内参数为空或者false  则是浅拷贝 即只复制标签 不复制内容
+            // 2.node.cloneNode(true)  如果括号内参数为true  则是深拷贝 即复制标签及其内容
+            var doli = clone.children[0].cloneNode(true);
+            clone.appendChild(doli);
+
+
+
+        // 三种动态创建元素的区别
+            // (1) document.write() 创建元素
+            // document.write('<div>123</div>')  // 如果页面文档流加载完毕 再调用会导致页面重绘
+
+            // (2) innerHTML 创建元素
+            var inner = document.querySelector('.inner');
+            inner.innerHTML = '<a href="#">百度</a>';
+
+            // (3) document.createElement() 创建元素
+            var create = document.querySelector('.create');
+            var a = document.createElement('a');
+            create.appendChild(a);
+
+            // innerHTML创建多个元素效率更高(不要拼接字符串，采取数组形式拼接) ,结构稍复杂
+            // createElement()创建多个元素效率较低 但结构更清晰
+     </script>
+
+</body>
+</html>
