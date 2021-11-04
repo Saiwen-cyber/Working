@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        function CountDown(time) {
+            var now=+new Date();
+            var input=+new Date(time);
+            var left=(input-now)/1000;
+            var day=parseInt(left/60/60/24);
+            var hour=parseInt(left/60/60%24);
+            var minute=parseInt(left/60%60);
+            var second=parseInt(left%60);
+            return '剩余时间还有'+day+'天'+hour+'时'+minute+'分'+second+'秒';
+        }
+        console.log(CountDown('2021-11-9'))
+    </script>
+</head>
+<body>
+
+</body>
+</html>
