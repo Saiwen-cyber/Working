@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button>
+    显示当前系统时间
+   </button>
+   <div>某个时间</div>
+    <p>rose</p>
+<script>
+    //当我们点击按钮、div里的文字会发生改变
+    //获取元素
+    var btn=document.querySelector('button');
+    var div=document.querySelector('div');
+    //注册事件
+    btn.onclick=function () {
+
+        div.innerText=getDate();
+    }
+    function getDate() {
+        var date=new Date();
+        var year=date.getFullYear();
+        var month=date.getMonth()+1;
+        var dates=date.getDate();
+        var day=date.getDay();
+        var days=['日','一','二','三','四','五','六']
+        return ('今天是'+year+'年'+month+'月'+dates+'日'+'\n'+'星期'+days[day]);
+    }
+
+    //我们元素可以不用添加事件
+    var p=document.querySelector('p');
+    p.innerText=getDate();
+</script>
+</body>
+</html>

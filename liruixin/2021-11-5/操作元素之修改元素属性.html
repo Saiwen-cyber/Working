@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button id="1">玫瑰</button>
+<button id="2">小熊</button>
+<img src="images/QQ图片20211105095610.jpg" alt="" title="玫瑰">
+<script>
+    //修改元素属性 src
+    var button1=document.getElementById('1');
+    var button2=document.getElementById('2');
+    var img=document.querySelector('img');
+    button2.onclick=function () {
+        img.src='images/QQ图片20211105095621.jpg'
+        img.title='小熊'
+    }
+    button1.onclick=function () {
+        img.src='images/QQ图片20211105095610.jpg'
+        img.title='玫瑰'
+    }
+
+</script>
+</body>
+</html>
