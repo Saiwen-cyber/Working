@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <div id="time">2021-11-4</div>
+   <script>
+       //因为我们文档页面从上往下加载 所有先得有标签 所以我们script写到标签的下面
+       //参数id是大小写敏感的字符串
+       //返回的是一个元素对象
+      var timer= document.getElementById('time');
+       console.log(timer);
+       console.log(typeof timer);
+       //console.dir 打印我们返回的元素对象 更好的查看里面的属性和方法
+       console.dir(timer);
+   </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>请一定多来电来信1</li>
+    <li>请一定多来电来信2</li>
+    <li>请一定多来电来信3</li>
+    <li>请一定多来电来信4</li>
+    <li>请一定多来电来信5</li>
+</ul>
+
+<ol id="ol">
+    <li>你的小狗1</li>
+    <li>你的小狗2</li>
+    <li>你的小狗3</li>
+    <li>你的小狗4</li>
+    <li>你的小狗5</li>
+</ol>
+  <script>
+      //返回的是 获取过来元素对象的集合 以伪数组的形式存储的
+      var lis=document.getElementsByTagName('li');
+      console.log(lis);
+      console.log(lis[0])
+      //依次打印里面的对象
+      for(var i=0;i<lis.length;i++)
+      {
+          console.log(lis[i]);
+      }
+      //如果页面中只有一个li 返回的还是伪数组的形式
+      //如果页面中没有这个元素 返回的是一个空的伪数组的形式
+
+      //指定父元素  element.getElementsByTagName('标签名')   父元素是唯一的哇 要给人家加上id
+      //上一个明明写了id啊啊啊啊
+      var ol=document.getElementById('ol');
+
+      console.log(ol.getElementsByTagName('li'));
+
+  </script>
+</body>
+</html>

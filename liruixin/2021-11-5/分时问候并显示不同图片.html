@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img{
+            width:300px;
+        }
+    </style>
+</head>
+<body>
+<img src="images/QQ图片20211105095610.jpg" alt="" title="上午好">
+<div>上午好</div>
+<script>
+    var img=document.querySelector('img');
+    var div=document.querySelector('div');
+    var time=new Date();
+    var hour=time.getHours();
+    if(8<hour<=12){
+        img.src='images/QQ图片20211105095621.jpg'
+        div.innerText="乖乖上午好 今天要开心"
+    }
+    else if(12<hour<=18){
+        img.src='images/QQ图片20211105095610.jpg'
+        div.innerText="乖乖下午好 加油哦"
+    }
+    else{
+        img.src='images/4d69592b37820788.jpg'
+        div.innerText="乖乖好好休息"
+    }
+</script>
+</body>
+</html>
