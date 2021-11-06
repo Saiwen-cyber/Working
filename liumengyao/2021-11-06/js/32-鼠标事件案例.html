@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            position: absolute;
+            top: 2px;
+        }
+    </style>
+</head>
+<body>
+    <img src="images/bear.png">
+
+    <script>
+        var pic = document.querySelector('img');
+        document.addEventListener('mousemove',function(e){
+            var x = e.pageX;
+            var y = e.pageY;
+            // console.log('x:'+x,'y:'+y);
+            pic.style.left = x - 19 + 'px';   //记得加单位 px
+            pic.style.top = y - 19 + 'px';
+
+        })
+    </script>
+</body>
+</html>
