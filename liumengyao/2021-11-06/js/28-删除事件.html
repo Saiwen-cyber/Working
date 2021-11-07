@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+
+    <script>
+        // 1.传统注册方式
+            // eventTarget.onclick = null;
+        var divs = document.querySelectorAll('div');
+        divs[0].onclick = function(){
+            alert('点击1');
+            divs[0].onclick = null;      
+        }
+
+        // 2.方法监听注册方式
+            // eventTarget.removeEventListener(type,listener[,useCapture]);
+        
+        divs[1].addEventListener('click',fn);   //调用fn时不需要加括号
+        function fn(){
+            alert('点击2');
+            divs[1].removeEventListener('click',fn);
+        }
+
+
+    </script>
+    
+</body>
+</html>

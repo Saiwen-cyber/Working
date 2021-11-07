@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="alert('hi')">传统注册事件</button>
+    <button>方法监听注册事件</button>
+    <button>attachEvent</button>
+
+    <script>
+        // 1.传统注册事件 特点： 注册事件的唯一性  
+        // 如果定义多次 就会被覆盖 比如这个只显示hello 警示框 不显示hi警示框
+        var btns = document.querySelectorAll('button');
+        btns[0].onclick = function(){
+            alert('hello');
+        }
+
+        // 2.方法监听注册方式 addEventListener() 
+
+        // 按注册顺序来执行  不会被覆盖 两个警示框都会显示出来 
+        // 同一个元素 同一个时间可以添加多个侦听器(事件处理程序)
+
+        // eventTarget.addEventListener(type,listener[,useCapture]);
+            // (1) type: 事件类型字符串  如click mouseover (不带on)
+            // (2) listener: 事件处理函数 事件发生时 会调用该监听函数
+            // (3) useCapture: 可选参数 布尔值 默认false 
+        btns[1].addEventListener('click',function(){
+            alert('方法监听注册事件1');
+        })
+        btns[1].addEventListener('click',function(){
+            alert('方法监听注册事件2');
+        })
+
+
+        // 3.attachEvent()  非标准 仅作为了解  ie9以前的版本支持  ie独有 chrome会报错
+        // eventTarget.attachEvent(eventNameWithOn, callback)
+            // (1)  eventNameWithOn: 事件类型字符串 如onclick onmouseover  都要带on
+            // (2) callback: 事件处理函数 当目标触发事件时回调函数被调用
+
+        // btns[2].attachEvent('onclick',function(){
+        //     alert('attachEvent');
+        // })
+        
+
+    </script>
+    
+</body>
+</html>
