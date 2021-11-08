@@ -34,7 +34,6 @@ spring:
     username: root
     password: 123456
     type: com.alibaba.druid.pool.DruidDataSource #自定义数据源
-    #druid专有属性，需要自己绑定
     initialSize: 6
     #...
     #配置监控统计拦截的filters，stat:监控统计、log4j：日志记录、wall：防御sql注入
@@ -43,8 +42,9 @@ spring:
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
-  mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.fangzhe.pojo
+  mapper-locations: classpath:mapper/*.xml
+
 ```
 
 
@@ -68,3 +68,4 @@ public class MyWebmvcConfiguration implements WebMvcConfigurer {
 }
 ```
 
+tips：注意不要忘记 Mapper接口注解@Mapper
