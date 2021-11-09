@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+      *{
+          margin: 0;
+          padding: 0;
+      }
+      body{
+          background: url("images/QQ图片20211105095621.jpg") no-repeat center top;
+      }
+      li{
+          list-style: none;
+      }
+      .baidu li{
+          float:left;
+
+      }
+      .baidu{
+          overflow:hidden;
+          margin:100px auto;
+          background-color: black;
+          width: 300px;
+
+          height: 100px;
+
+      }
+      .baidu img{
+          width: 100px;
+          height: 100px;
+      }
+  </style>
+</head>
+<body>
+<ul class='baidu'>
+    <li><img src="images/QQ图片20211105095610.jpg"></li>
+    <li><img src="images/QQ图片20211105095621.jpg"></li>
+    <li><img src="images/4d69592b37820788.jpg"></li>
+</ul>
+<script>
+    var imgs=document.getElementsByTagName('img');
+
+    var body=document.body;
+    for(var i=0;i<imgs.length;i++){
+        imgs[i].onclick=function () {
+            //将body背景换为点击的图片 url(this.src)     注意格式'url('+this.src+')'
+           body.style.backgroundImage='url('+this.src+')'
+        }
+    }
+</script>
+</body>
+</html>

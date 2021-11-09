@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Title</title>
+
+    <style>
+        input{
+            color: #cccccc;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" value="手机">
+    <!--//获得焦点事件 类似淘宝搜索框-->
+    <script>
+        var input=document.querySelector('input');
+        //获得焦点事件
+        input.onfocus=function () {
+            console.log('得到了焦点');
+            //想清空的话 把value变成空值即可
+            if(input.value === '手机'){
+                input.value = '';
+            }
+            input.style.color='black';
+        }
+        //失去焦点事件
+        input.onblur=function () {
+            console.log('失去了焦点');
+            if(input.value===''){
+                input.value='手机';
+                input.style.color='#cccccc';
+            }
+        }
+    </script>
+</body>
+</html>
