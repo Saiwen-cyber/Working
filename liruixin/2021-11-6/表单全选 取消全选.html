@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        thead{
+            background-color: purple;
+        }
+        table{
+            margin: 100px;
+            margin-left: 500px;
+            width: 250px;
+            /*单线框*/
+            border-collapse: collapse;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+
+        <table border="1" >
+            <thead>
+            <tr>
+                <th>
+                    <input type="checkbox" id="j_caAll" >
+                </th>
+                <th>商品</th>
+                <th>价钱</th>
+            </tr>
+            </thead>
+            <tbody id="j_tb">
+            <tr>
+                <td>
+                    <input type="checkbox">
+                </td>
+                <td>iphone12</td>
+                <td>5000</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox">
+                </td>
+                <td>ipad pro</td>
+                <td>4000</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox">
+                </td>
+                <td>ipad air</td>
+                <td>2000</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox">
+                </td>
+                <td>apple</td>
+                <td>3000</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+    var j_caAll=document.getElementById('j_caAll');   //全选按钮
+    var j_tbs=document.getElementById('j_tb').getElementsByTagName('input');   //下面所有的复选框
+        j_caAll.onclick=function () {
+            //当前的选中状态为checked
+            for(var i=0;i<j_tbs.length;i++){
+               j_tbs[i].checked=this.checked;
+            }
+
+        }
+
+    </script>
+</body>
+</html>

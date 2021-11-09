@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="box">
+    淘宝二维码
+    <img src="images/QQ图片20211105095610.jpg" width="48px">
+    <i class='close-btn'></i>
+</div>
+<script>
+    //html和css就不写了 有点浪费时间 就记住隐藏这个就行
+    var btn=document.querySelector('.close-btn');
+    var box=document.querySelector('.box');
+    btn.onclick=function () {
+        box.style.display='none';        //隐藏起来
+    }
+</script>
+</body>
+</html>

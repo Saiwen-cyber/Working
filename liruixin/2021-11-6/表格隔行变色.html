@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--//新的鼠标事件 鼠标经过onmouseover 鼠标离开onmouseout-->
+    <!--鼠标经过是紫色,移走无色-->
+    <style>
+        table{
+            margin: 150px;
+            /*加边框 table frame=below则可以只加下边框*/
+            border-collapse: collapse;
+            margin-left: 400px;
+
+        }
+       tbody tr{
+            color:blue;
+            border: 1px solid #ccc;
+        }
+        .bg{
+            background-color: mediumpurple;
+        }
+
+    </style>
+</head>
+<body>
+<table frame=below>
+    <!--//thead是表头的意思-->
+    <thead>
+    <tr>
+        <th>代码</th>
+        <th>名称</th>
+        <th>最新公布净值</th>
+        <th>累计净值</th>
+        <th>前单位净值</th>
+        <th>净值增长率</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+    </tr>
+    <tr>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+    </tr>
+    <tr>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+    </tr>
+    <tr>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+        <th>6</th>
+    </tr>
+    </tbody>
+</table>
+<script>
+    //获取元素是tbody里面所有的行
+    var trs = document.querySelector('tbody').querySelectorAll('tr')
+    //利用循环绑定注册事件
+    for(var i=0;i<trs.length;i++){
+        // 鼠标经过
+        trs[i].onmouseover=function () {
+            console.log('1');
+            this.className='bg';
+        }
+        trs[i].onmouseout=function () {
+            this.className='';
+        }
+    }
+</script>
+</body>
+</html>
