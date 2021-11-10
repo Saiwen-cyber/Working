@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="images/bear.png" alt="" class="ad">
+    <button class="btn">停止setTimeout定时器</button>
+    <button class="btn1">停止setInterval定时器</button> <br>
+    手机号码: <input type="number"><button class="btn2">发送</button>
+
+    <script>
+        // 1. setTimeout
+        // window.setTimeout(调用函数,延续时间)
+            // (1) window可以省略
+            // (2) 延时时间单位是毫秒 可以省略 省略默认是0
+            // (3) function可以直接写函数名 也可以写   '函数名()'
+            // (4) 页面中会有很多定时器 需要加标识符(名字)
+            setTimeout(function(){
+                console.log('you will become rich!');
+            }, 2000);
+
+            function fn() {
+                console.log('Arkin! rich!');
+            }
+            setTimeout(fn, 3000);
+            setTimeout('fn()', 5000);  //不提倡
+
+            var time1 = setTimeout(fn, 7000);
+            var time2 = setTimeout(fn, 9000);
+
+        // 2. 定时关闭广告 
+            var ad = document.querySelector('.ad');
+            setTimeout(function() {
+                ad.style.display = 'none';
+            }, 5000);
+
+
+        // 3. window.clearTimeout(定时器名字)  停止定时器
+            var btn = document.querySelector('.btn');
+            btn.addEventListener('click',function(){
+                clearTimeout(fn);
+            })     
+
+
+        // 4. setInterval() 定时器
+            // window.setInterval(回调函数, [间隔的毫秒数])
+            // (1) 重复调用一个函数 每隔一个时间 去调用一次 
+            // (2)注意事项与setTimeout类似
+            function fn1() {
+                console.log('RICH!');
+            }
+            var timer = setInterval(fn1,1000);
+
+        // 5. 停止 setInterval() 定时器
+            var btn1 = document.querySelector('.btn1');
+            btn1.addEventListener('click',function() {
+                clearInterval(timer);
+            })
+
+
+        // 6.发送短信案例
+            var btn2 = document.querySelector('.btn2');
+            var time = 3  //定义剩下的秒数
+            btn2.addEventListener('click',function(){
+                btn2.disabled = true;
+                var timer1 = setInterval(function(){
+                    btn2.innerHTML = '还剩下' + time + '秒';
+                    if(time == 0){
+                        clearInterval(timer1);
+                        btn2.disabled = false;
+                        btn2.innerHTML = '发送';
+                        time = 3;
+                    } else {
+                        time--;
+                    }
+                }, 1000);
+            })
+
+            
+            
+    </script>
+
+</body>
+</html>
