@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 100px;
+            background-color: pink;
+            margin-bottom: 2%;
+        }
+    </style>
+</head>
+<body>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<script>
+    var divs=document.querySelectorAll('div');
+    divs[0].onclick=function () {
+        alert(11);
+        //传统方式删除事件 显示一次之后 实现解绑效果
+        divs[0].onclick=null;
+    }
+    //方法监听删除事件
+    //调用时 使用构造函数 里面的fn不需要调用加小括号
+    divs[1].addEventListener('click',fn)
+    function fn () {
+        alert(22);
+        divs[1].removeEventListener('click',fn);
+    }
+</script>
+</body>
+</html>

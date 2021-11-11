@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>我是div</div>
+<span>我是span</span>
+<ul>
+    <li>我是li</li>
+    <li>我是li</li>
+    <li>我是li</li>
+    <li>我是li</li>
+</ul>
+<div class="box">
+    <span class="erweima"></span>
+</div>
+  <script>
+      //子节点   childNodes包含所有子节点 包括元素节点、文本节点等等
+      var ul=document.querySelector('ul');
+      var li=ul.childNodes;
+      console.dir(li)
+      console.log(ul.childNodes[0].nodeType);   //文本节点
+      console.log(ul.childNodes[1].nodeType);  //元素节点
+      //若想只获得元素节点，就要判断Nodetype
+      for(var i=0;i<ul.childNodes.length;i++){
+          if(ul.childNodes[i].nodeType==1){
+              console.log(ul.childNodes[i]);
+          }
+      }
+      //子节点 只获取所有的元素节点  我们实际开发常用的
+      console.log(ul.children);
+  </script>
+
+</body>
+</html>

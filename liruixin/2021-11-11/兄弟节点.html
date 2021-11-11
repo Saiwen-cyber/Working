@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>我是div</div>
+    <span>我是span</span>
+    <script>
+        var div=document.querySelector('div');
+        console.log(div.nextSibling);        //#text得到下一个兄弟节点 包括元素节点或者文本节点
+        console.log(div.previousSibling);    //#text得到上一个兄弟节点 包括元素节点或者文本节点
+        console.log(div.nextElementSibling);     //下一个元素节点
+        console.log(div.previousElementSibling);    //null 上面没有元素节点
+        
+    </script>
+</body>
+</html>

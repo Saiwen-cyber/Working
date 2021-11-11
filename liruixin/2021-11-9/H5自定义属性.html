@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+   <div data-getTime="20" data-index="2" data-list-name="xin"></div>
+    <script>
+        var div=document.querySelector('div');
+        //不行 自定义属性不可以这样显示
+        // console.log(div.getTime);
+        console.log(div.getAttribute('getTime'))
+        //H5规定自定义属性data-开头作为属性名并且赋值
+        //H5新增获取自定义属性方法
+        //dataset是一个集合 里面存放了所有以data开头的自定义属性
+        console.log(div.dataset)
+        console.log(div.dataset.index);
+        //如果自定义属性里有多个短横线‘-’链接的单词 我们获取的时候采取驼峰命名法
+        console.log(div.dataset.listName)
+    </script>
+</body>
+</html>

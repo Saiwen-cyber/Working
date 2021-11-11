@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button>传统注册事件</button>
+<button>方法监听注册事件</button>
+</body>
+<script>
+    //传统注册事件具有唯一性 前面的处理函数会被后面的处理函数覆盖掉  只会弹出how r u
+    var btns=document.querySelectorAll('button');
+    btns[0].onclick=function () {
+        alert('hi')
+    }
+    btns[0].onclick=function () {
+        alert('how r u')
+    }
+    //事件侦听注册事件   事件类型是字符串 必定加引号 并且不带on  不具有唯一性 可以连弹两次警示框
+    btns[1].addEventListener('click',function () {
+        alert('22')
+    })
+    btns[1].addEventListener('click',function () {
+        alert('33')
+    })
+</script>
+</html>

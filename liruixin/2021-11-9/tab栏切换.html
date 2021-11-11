@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        li {
+            list-style-type: none;
+        }
+        .tab{
+            margin-top: 100px;
+            margin-left: 300px;
+
+        }
+        .tab_list li{
+            /*横向并列  用float*/
+            float: left;
+            height: 39px;
+            line-height: 39px;
+            padding: 0 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .tab_con .items{
+            float: left;
+            line-height: 100px;
+            padding: 0 5px;
+            text-align: center;
+            bottom: 100px;
+            margin-left: -540px;
+
+        }
+
+        .items{
+            display: none;
+        }
+        .change{
+            display:block;
+        }
+      .current{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+       <!--分为上下两个盒子-->
+      <div class='tab'>
+          <div class="tab_list">
+                <ul>
+                    <li class="current">商品介绍</li>
+                    <li>规格和包装</li>
+                    <li>售后保障</li>
+                    <li>商品评价</li>
+                    <li>手机社区</li>
+                </ul>
+          </div>
+          <br>
+
+          <div class="tab_con">
+              <div class="items" style="display: inline-block" >
+              商品介绍模块内容
+                </div>
+              <div class="items">
+                  规格模块内容
+              </div>
+              <div class="items">
+                  售后模块内容
+              </div>
+              <div class="items">
+                  评价模块内容
+              </div>
+              <div class="items">
+                  社区模块内容
+              </div>
+          </div>
+      </div>
+<script>
+    //点击某一个，当前底色变为红色，其余不变，排他思想
+    // console.log(li);
+    var list1=document.querySelector('ul');
+    var lis=list1.querySelectorAll('li');
+    var items=document.querySelector('.tab_con').querySelectorAll('.items');
+    for(var i=0;i<lis.length;i++){
+        //给li设置属性 索引号
+        lis[i].setAttribute('index',i);
+        lis[i].onclick=function () {
+            //清除所有人的属性
+            for(var i=0;i<lis.length;i++){
+                lis[i].className='';
+            }
+            //只留我自己
+            this.className='current';
+            //清除所有文字
+            for(var i=0;i<lis.length;i++){
+                items[i].style.display='none';
+            }
+            //只留我自己
+            var index = this.getAttribute('index');
+            items[index].style.display='block';
+        }
+    }
+</script>
+</body>
+</html>

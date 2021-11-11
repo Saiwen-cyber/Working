@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--节点至少拥有nodeType(节点类型)，nodeName(节点名称），和nodeValue(节点值)这三个-->
+<!--基本属性 元素节点nodeType为1，属性节点nodeType为2，文本节点nodeType为3（文字、空格、换行等）-->
+<div>我是div</div>
+<span>我是span</span>
+<ul>
+    <li>我是li</li>
+    <li>我是li</li>
+    <li>我是li</li>
+    <li>我是li</li>
+</ul>
+<div class="box">
+    <span class="erweima"></span>
+</div>
+<script>
+    var box=document.querySelector('.box');
+    console.dir(box);
+</script>
+</body>
+</html>
