@@ -1,3 +1,3 @@
 理解并记忆
 
-![image-20211109211339368](README.assets/image-20211109211339368.png)
+![minstack](https://cdn.jsdelivr.net/gh/Saiwen-cyber/images@master/minstack.png)
