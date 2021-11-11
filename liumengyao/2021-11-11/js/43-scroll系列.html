@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            border: 10px solid brown;
+            padding: 10px;
+            /* 自动显示滚动条 */
+            overflow: auto;  
+        }
+    </style>
+</head>
+<body>
+    <div>
+        you would become rich!    you would become rich!    you would become rich!    you would become rich!    you would become rich!    you would become rich!    you would become rich!    you would become rich!    you would become rich!    you would become rich!    you would become rich!    you would become rich!    you would become rich!    you would become rich!    you would become rich!    you would become rich!    you would become rich!    you would become rich!    you would become rich!    you would become rich!    
+    </div>
+
+    <script>
+        // 元素滚动 scroll系列
+        // 经常用于获取滚动距离 scrollTop scrollLeft
+        // 页面的滚动距离通过 window.pageYOffset获得
+
+
+        // 元素滚动 scroll系列
+            // (1) element.scrollWidth  返回自身实际宽度 不含边框 返回数值不带单位
+            var div = document.querySelector('div');
+            console.log(div.scrollWidth);
+
+            // (2) element.scrollHeight  返回自身实际高度(总的 包括被卷入的部分) 不含边框 返回数值不带单位
+            console.log(div.scrollHeigth);
+            
+            // (3) element.scrollTop   被卷去的上侧距离(边框下沿到头部) 返回数值不带单位
+            // scroll事件 滚动滚动条时触发
+            div.addEventListener('scroll',function(){
+                console.log(div.scrollTop);
+            });
+            // (4) element.scrollLeft  被卷去的左侧距离 返回数值不带单位
+    </script>
+    
+</body>
+</html>

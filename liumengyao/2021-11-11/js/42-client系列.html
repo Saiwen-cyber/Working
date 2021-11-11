@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: orange;
+            border: 10px solid brown;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <script>
+        // 元素可视区client系列
+        // 经常用于获取元素大小 clientWidth clientHeight
+
+        // client翻译过来就是客户端 使用client系列的相关属性来获取元素可视区的相关信息 通过client系列的相关属性可以动态的得到该元素的边框大小、元素大小等
+
+        // 1. 元素可视区client系列属性
+            var div = document.querySelector('div');
+            // (1) element.clientTop  返回元素上边框的大小
+            // (2) element.clientLeft 返回元素左边框的大小
+            // (3) element.clientWidth  返回自身包括padding、内容区的宽度，不含边框，返回数值不带单位
+            console.log(div.clientWidth);
+            // (4) element.clientHeight 返回自身包括padding、内容区的高度，不含边框，返回数值不带单位
+
+
+        // 2. 立即执行函数 ： 不需要调用 立马能够自己执行的函数
+            (function(){
+                console.log('------立即执行函数------');
+            }());
+        // 注意：有多个立即执行函数时需要分号隔开
+        // 格式：
+            // (1) ( function() {} )();
+            (function(a,b){
+                console.log(a,b);
+            })(1,2);   // 第二个括号可以看作是调用函数
+
+            // (2) ( function () {} () );
+            (function(a,b){
+                console.log(a+b)
+            } (2,3));
+
+            // (3) 立即执行函数最大的作用就是 独立创建了一个作用域 里面所有的变量都是局部变量 不会有命名冲突的情况
+    </script>
+</body>
+</html>

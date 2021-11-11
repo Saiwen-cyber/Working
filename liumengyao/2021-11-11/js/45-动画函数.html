@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div {
+            position: absolute;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+
+        .div1 {
+            position: absolute;
+            left: 0;
+            top: 150px;
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+
+        span {
+            position: absolute;
+            left: 0;
+            top: 300px;
+            display: bolck;
+            width: 150px;
+            height: 150px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+<body>
+    <button class="btn200">span到200</button>
+    <button class="btn500">span到500</button>
+    <div class="div"></div>  
+    <div class="div1"></div>  
+    <span>span</span>
+    <script>
+        // 1.mouseenter 和 mouseover的区别
+            // 鼠标移动到元素上时就会触发mouseenter事件 
+            // mouseover经过自身和子盒子都会触发 mouseenter只有经过自身盒子才会触发
+            // Mouseenter不会冒泡
+            // mouseenter 搭配 mouseleave 同样不会冒泡
+
+
+        // 2.动画实现原理
+            // 核心原理: 通过定时器setInterval()不断移动盒子位置
+            // (1) 获得盒子当前位置
+            // (2) 让盒子在当前位置上加 1 个移动距离
+            // (3) 利用定时器不断重复这个动作
+            // (4) 加一个结束定时器的条件
+            // (5) 注意元素要添加定位才能使用 element.style.left
+
+            // 注意: offsetLeft只能读不能写 style.left可以写
+            var div = document.querySelector('div');
+            var timer = setInterval(function(){
+                if(div.offsetLeft >= 400){
+                    // 停止动画 (本质是停止定时器)
+                    clearInterval(timer);
+                }
+                div.style.left = div.offsetLeft + 1 + 'px';
+            }, 30);
+
+
+        // 3.简单动画函数封装
+            // 给不同的对象添加不同的定时器时 可以把var timer = function改为 obj.timer = funtion
+            // 不用重新开辟内存
+
+            // 注意函数需要传递 2 个参数 : 动画对象 和 移动到的距离
+            // obj:目标对象  target:目标位置
+            // 注意: 一定要加定位 position left top
+            function animate(obj, target, callback){
+                // 调用回调函数的时候要加括号： callback()
+
+                // 但会出现问题： 不断点击按钮时 元素的速度越来越快 因为开启了太多的定时器
+                // 解决方案：让元素只有一个定时器执行
+                clearInterval(obj.timer);  //清除定时器
+                obj.timer = setInterval(function(){
+                    // 将步长值写到定时器里面(缓动动画)
+                    var step = (target - obj.offsetLeft) / 10;
+                    step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                    if(obj.offsetLeft == target){
+                        // 停止动画 (本质是停止定时器)
+                        clearInterval(obj.timer);
+                        // 回调函数写到定时器结束里面
+                        if(callback){
+                            // 调用函数
+                            callback();
+                        }
+                    }
+                    // 把 1 改为 step
+                    obj.style.left = obj.offsetLeft + step + 'px';
+                }, 15);
+            }
+            // 调用函数
+            var div1 = document.querySelector('.div1');
+            var span = document.querySelector('span' );
+            var btn200 = document.querySelector('.btn200');
+            var btn500 = document.querySelector('.btn500');
+            animate(div1,300);
+            btn200.addEventListener('click',function(){
+                animate(span,200);
+            });
+            btn500.addEventListener('click',function(){
+                animate(span,500,function(){
+                    span.style.backgroundColor = 'yellowgreen';
+                    alert('rich!');
+                });
+            });
+
+        // 4.缓动动画原理
+            // 让动画运动速度有所变化，最常见的是让速度慢慢停下来
+            // (1) 让盒子每次移动距离逐渐减小
+            // (2) 核心算法: (目标值-现在的位置)/10 作为每次移动的距离长
+            // (3) 停止条件: 让当前盒子位置等于目标位置就停止定时器
+            
+        // 匀速动画 就是 盒子当前的位置 + 固定的值
+        // 缓动动画 就是 盒子当前的位置 + 变化的值
+
+
+        // 5.动画函数添加回调函数
+            // 回调函数原理： 将一个函数作为参数传递到另一个函数中，当那个函数执行完之后，再执行传进去的这个函数 ，这个过程叫做回调。
+            // 回调函数要写到定时器结束的位置
+
+
+        // 6.动画函数的使用
+            //可以封装到js文件中 
+            
+    </script>
+</body>
+</html>
