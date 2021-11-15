@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        li a{
+            float: right;
+        }
+        li{
+            width: 300px;
+            background-color: pink;
+            list-style-type: none;
+            margin-left:0px;
+        }
+    </style>
+</head>
+<body>
+<textarea name="" id=""></textarea>
+<button>发布</button>
+<ul>
+
+</ul>
+<script>
+    var text=document.querySelector('textarea');
+    var button=document.querySelector('button');
+    var ul=document.querySelector('ul');
+    button.onclick=function () {
+        //文本内容是text.value不是text
+        if(text.value!=''){
+            var li=document.createElement('li');
+            //添加删除链接     不用#号是因为链接会改变 不应该跳转
+            li.innerHTML=text.value +"<a href='javascript:;'>删除</a>";
+            // ul.appendChild(li);  //最新留言在下面显示
+            ul.insertBefore(li,ul.children[0]);   //最新留言在在前面显示
+            //删除元素 删除的是当前的li 它的父亲
+            // node.removeChild(children)
+            var as=document.querySelectorAll('a');
+            //赋予所有删除链接功能
+            for(var i=0;i<as.length;i++){
+                as[i].onclick=function () {
+                    ul.removeChild(this.parentNode)
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<!--删除子节点-->
+<!--node.removeChild(children)-->
+<body>
+    <button>删除</button>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+<script>
+    var button=document.querySelector('button');
+    var ul=document.querySelector('ul');
+    button.onclick=function () {
+        ul.removeChild(ul.children[0]);
+        if(ul.children.length==0){
+            button.disabled='disabled'   //全删光了之后按钮失效
+        }
+    }
+</script>
+</body>
+</html>

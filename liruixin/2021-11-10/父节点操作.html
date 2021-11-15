@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>我是div</div>
+<span>我是span</span>
+<ul>
+    <li>我是li</li>
+    <li>我是li</li>
+    <li>我是li</li>
+    <li>我是li</li>
+</ul>
+<div class="box">
+    <span class="erweima"></span>
+</div>
+<script>
+    //1.父节点 parentNode
+    var erweima=document.querySelector('.erweima');
+    // var box=document.querySelector('.box');
+    //获取erweima的父节点 得到的是离元素最近的父级节点
+    var box=erweima.parentNode;
+    console.dir(box);
+</script>
+
+</body>
+</html>

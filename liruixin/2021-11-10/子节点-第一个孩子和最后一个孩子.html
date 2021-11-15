@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>我是div</div>
+<span>我是span</span>
+<ol>
+    <li>我是li1</li>
+    <li>我是li2</li>
+    <li>我是li3</li>
+    <li>我是li4</li>
+</ol>
+<script>
+    var ol=document.querySelector('ol');
+    console.log(ol.firstChild) ;    //#text 因为是childNode包含文本节点 第一个节点是换行
+    console.log(ol.lastChild) ;     //#text 因为是childNode包含文本节点 最后一个节点是换行
+    console.log(ol.firstElementChild);    //li1
+    console.log(ol.lastElementChild) ;     //li4   有兼容性问题
+    //实际开发的写法 没有兼容性问题
+    console.log(ol.children[0]);
+    console.log(ol.children[ol.children.length-1]);    //不知道有多少个li
+</script>
+</body>
+</html>

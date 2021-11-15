@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--如果下面复选框全部选中，则全选按钮也被选中-->
+    <!--每点击一个复选框，就判断其他复选框是否为选中状态，若全部被选中，则全选框也变为选中状态-->
+    <style>
+        thead{
+            background-color: purple;
+        }
+        table{
+            margin: 100px;
+            margin-left: 500px;
+            width: 250px;
+            /*单线框*/
+            border-collapse: collapse;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrap">
+
+    <table border="1" >
+        <thead>
+        <tr>
+            <th>
+                <input type="checkbox" id="j_caAll" >
+            </th>
+            <th>商品</th>
+            <th>价钱</th>
+        </tr>
+        </thead>
+        <tbody id="j_tb">
+        <tr>
+            <td>
+                <input type="checkbox">
+            </td>
+            <td>iphone12</td>
+            <td>5000</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox">
+            </td>
+            <td>ipad pro</td>
+            <td>4000</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox">
+            </td>
+            <td>ipad air</td>
+            <td>2000</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox">
+            </td>
+            <td>apple</td>
+            <td>3000</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script>
+    var j_caAll=document.getElementById('j_caAll');   //全选按钮
+    var j_tbs=document.getElementById('j_tb').getElementsByTagName('input');   //复选按钮
+    for(var i=0;i<j_tbs.length;i++){
+        //给每个复选框都加上点击事件
+        j_tbs[i].onclick=function () {
+            var flag=true;   //这句必不可少 放在点击事件内部 做条件
+            //每次点击复选框都要循环检查 是否全被选中
+            for(var i=0;i<j_tbs.length;i++){
+                if(!j_tbs[i].checked){
+                   flag=false;
+                }
+
+            }
+            j_caAll.checked=flag;
+        }
+    }
+</script>
+</body>
+</html>
