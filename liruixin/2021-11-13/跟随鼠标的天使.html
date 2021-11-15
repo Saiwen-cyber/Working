@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img{
+            width:100px;
+            height: 100px;
+            position: absolute;
+
+        }
+    </style>
+</head>
+<body>
+<img src="images/7ADB9C6FE52909B0C6D5D7586CFE4CB8.jpg" alt="">
+<script>
+    document.addEventListener('mousemove',function (ev) {
+        //只要鼠标移动1px,就会触发这个事件
+        //每次移动鼠标，都会获得最新的鼠标坐标
+        var x=ev.pageX;
+        var y=ev.pageY;
+        var img=document.querySelector('img');
+        //千万不要忘记加px
+        img.style.left=x+'px';
+        img.style.top=y+'px';
+    })
+</script>
+</body>
+</html>
