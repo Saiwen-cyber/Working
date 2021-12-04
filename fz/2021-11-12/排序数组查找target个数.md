@@ -23,5 +23,7 @@ class Solution {
     }
 }
 排序数组中查找数字出现个数。
+eg:1 3 5 7 8 8 8 8 8 10 87 88 target = 8
+    result = 5
 ```
 
